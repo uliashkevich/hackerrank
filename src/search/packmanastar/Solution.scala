@@ -1,9 +1,13 @@
+// Pacman A*
+// https://www.hackerrank.com/challenges/pacman-astar
+
 package search.packmanastar
 
 import scala.collection._
 
-// https://www.hackerrank.com/challenges/pacman-astar
-
+/**
+ * Plain A* search implementation
+ */
 object Solution {
 
   case class Point(row: Int, col: Int) {

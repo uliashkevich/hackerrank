@@ -1,7 +1,13 @@
-package search.connectedcell
-
+// Connected Cell in a Grid
 // https://www.hackerrank.com/challenges/connected-cell-in-a-grid
 
+package search.connectedcell
+
+/**
+ * 1) Find next cell == 1
+ * 2) Fill the region with 2's and count the number of cells
+ * 3) Make recursive call and calculate maximum between the current region size and the returned value
+ */
 object Solution {
 
   case class Pos(row: Int, col: Int) {

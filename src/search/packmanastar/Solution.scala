@@ -22,7 +22,6 @@ object Solution {
   }
 
   val open = mutable.PriorityQueue.empty[Visited]
-  val visited = mutable.HashSet.empty[Point]
 
   val map = mutable.ArrayBuffer.empty[String]
 

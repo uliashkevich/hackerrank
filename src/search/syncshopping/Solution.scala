@@ -219,15 +219,17 @@ object Solution {
               fishNode <- fishMap(fishNumber)
             } yield fishNode).toSet
 
-            for (node <- targetNodes) {
-              if (path.level == 0) {
+            if (path.level == 0) {
+              for (node <- targetNodes) {
                 queuePath(Path(
                   path.bigCat.movingTo(node, distanceMatrix(path.bigCat.lastNode)(node)),
                   path.littleCat,
                   path.bigFish ++ task.shoppingCenters(node),
                   path.littleFish,
                   1))
-              } else {
+              }
+            } else {
+              for (node <- targetNodes) {
                 queuePath(Path(
                   path.bigCat,
                   path.littleCat.movingTo(node, distanceMatrix(path.littleCat.lastNode)(node)),
